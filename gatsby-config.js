@@ -45,11 +45,22 @@ module.exports = {
       },
     },
 		{
-      resolve: `gatsby-source-mongodb`,
+      resolve: `gatsby-source-mysql`,
       options: {
-				connectionString: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_URL}`,
-				dbName: `${process.env.DB_NAME}`,
-			 },
+				connectionDetails: {
+					host: `${process.env.DB_HOST}`,
+					user: `${process.env.DB_USER}`,
+					password: `${process.env.DB_PASS}`,
+					database: `${process.env.DB_NAME}`
+				},
+				queries: [
+          {
+            statement: 'SELECT * FROM events',
+            idFieldName: 'Code',
+            name: 'events'
+          }
+        ]
+			}
     },
   ],
 }
