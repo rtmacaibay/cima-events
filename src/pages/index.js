@@ -20,44 +20,50 @@ const Item = styled(Paper)(({ theme }) => ({
   margin: '2em'
 }));
 
+const BasicCardItem = () =>  {
+  return (
+    <Item>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardHeader
+          avatar={
+            <Avatar sx={{ bgcolor: red[500] }} aria-label="event">R</Avatar>
+          }
+          title="Creamies HACKATHON"
+          subheader="March 26, 2023"
+        />
+      </Card>
+    </Item>
+  );
+};
+
 const IndexPage = () => (
   <Layout>
     <Grid container spacing={2}>
       <Grid item xs={3}>
-        <Item>
-          <Card sx={{ maxWidth: 345 }}>
-            <CardHeader
-              avatar={
-                <Avatar sx={{ bgcolor: red[500] }} aria-label="event">R</Avatar>
-              }
-              title="Creamies HACKATHON"
-              subheader="March 26, 2023"
-            />
-          </Card>
-        </Item>
+        <BasicCardItem/>
       </Grid>
       <Grid item xs={3}>
-        <Item>xs=3</Item>
+        <BasicCardItem/>
       </Grid>
       <Grid item xs={3}>
-        <Item>xs=3</Item>
+        <BasicCardItem/>
       </Grid>
       <Grid item xs={3}>
-        <Item>xs=3</Item>
+        <BasicCardItem/>
       </Grid>
     </Grid>
     <Grid container spacing={2}>
     <Grid item xs={3}>
-        <Item>xs=3</Item>
+        <BasicCardItem/>
       </Grid>
       <Grid item xs={3}>
-        <Item>xs=3</Item>
+        <BasicCardItem/>
       </Grid>
       <Grid item xs={3}>
-        <Item>xs=3</Item>
+        <BasicCardItem/>
       </Grid>
       <Grid item xs={3}>
-        <Item>xs=3</Item>
+        <BasicCardItem/>
       </Grid>
     </Grid>
   </Layout>
