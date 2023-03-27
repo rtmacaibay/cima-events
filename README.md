@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="CIMA Events" src="/images/logo-transparent.png" width=400/>
+  <a href="https://github.com/rtmacaibay/cima-events">
+    <img alt="CIMA Events" src="/images/logo-light.png" width=400/>
   </a>
 </p>
 
