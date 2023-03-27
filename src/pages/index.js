@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { CardHeader, CardMedia, Grid } from "@mui/material"
+import { CardActionArea, CardContent, CardHeader, CardMedia, Grid, Typography } from "@mui/material"
 import Paper from '@mui/material/Paper'
 import { styled } from "@mui/material/styles"
 import Card from '@mui/material/Card'
@@ -24,17 +24,24 @@ const BasicCardItem = () => {
     return (
         <Item>
             <Card variant='outlined' sx={{ maxWidth: 345 }}>
-                <CardHeader
-                    avatar={
-                        <Avatar sx={{ bgcolor: red[500] }} aria-label="event">R</Avatar>
-                    }
-                    title="Creamies HACKATHON"
-                    subheader="March 26, 2023"
-                />
-                <CardMedia
-                    component="img"
-                    height="135"
-                />
+                <CardActionArea>
+                    <CardHeader
+                        avatar={
+                            <Avatar sx={{ bgcolor: red[500] }} aria-label="event">R</Avatar>
+                        }
+                        title="Creamies HACKATHON"
+                        subheader="March 26, 2023"
+                    />
+                    <CardMedia
+                        component="img"
+                        height="135"
+                    />
+                    <CardContent>
+                        <Typography>
+                            Come to the creamies for hackathon. You can cima!
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
             </Card>
         </Item>
     );
