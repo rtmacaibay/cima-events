@@ -12,12 +12,21 @@ import Header from "./header"
 import { Helmet } from "react-helmet"
 import "./layout.css"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
+import { grey } from '@mui/material/colors'
 import CssBaseline  from "@mui/material/CssBaseline"
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
+const theme = createTheme({
+    palette: {
+        mode: 'dark',
+        background: {
+            default: '#0A1929',
+            paper: '#1c2c3f',
+        },
+        text: {
+            primary: '#fff',
+            secondary: grey[500],
+        },
+    },
 });
 
 const Layout = ({ children }) => {
@@ -35,8 +44,8 @@ const Layout = ({ children }) => {
     }
   `)
   return (
-    <ThemeProvider theme={darkTheme}> 
-      <CssBaseline />
+    <ThemeProvider theme={theme}> 
+      <CssBaseline enableColorScheme/>
       <Helmet
         title={'Cima Events'}
         meta={[

@@ -1,11 +1,12 @@
 import * as React from "react"
 
-import { CardHeader, Grid } from "@mui/material"
+import { CardHeader, CardMedia, Grid } from "@mui/material"
 import Paper from '@mui/material/Paper'
 import {styled} from "@mui/material/styles"
 import Card from '@mui/material/Card'
 import Avatar from '@mui/material/Avatar'
 import { red } from '@mui/material/colors'
+import IconButton from "@mui/material"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -22,13 +23,17 @@ const Item = styled(Paper)(({ theme }) => ({
 const BasicCardItem = () =>  {
   return (
     <Item>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card variant='outlined' sx={{ maxWidth: 345 }}>
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: red[500] }} aria-label="event">R</Avatar>
           }
           title="Creamies HACKATHON"
           subheader="March 26, 2023"
+        />
+        <CardMedia
+            component="img"
+            height="135"
         />
       </Card>
     </Item>
