@@ -14,7 +14,25 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Cima Events`,
+    menuLinks:[
+      {
+        name: 'home',
+        link: '/'
+      },
+      {
+        name: 'page2',
+        link: '/page-2'
+      },
+      {
+        name: '404',
+        link: '/404'
+      }, 
+      {
+        name: 'usingSSR',
+        link: '/using-ssr'
+      }
+    ],
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
